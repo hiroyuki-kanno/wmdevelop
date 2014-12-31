@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* ‰Šúİ’è -------------------------------------*/
+/* åˆæœŸè¨­å®š -------------------------------------*/
 body {
   margin:0;
   padding: 0;
@@ -33,7 +33,7 @@ section, article, aside, nav, header, main, footer {
   display: block;
 }
 
-/* ƒy[ƒW‚Ì˜g‘g‚İ -------------------------------------*/
+/* ãƒšãƒ¼ã‚¸ã®æ çµ„ã¿ -------------------------------------*/
 #page {
   margin: 0 auto;
   width: 900px;
@@ -62,7 +62,7 @@ footer section:nth-child(2) {
   clear: both;
 }
 
-/* ƒwƒbƒ_ */
+/* ãƒ˜ãƒƒãƒ€ */
 header img {
   display: block;
 }
@@ -71,7 +71,7 @@ header img {
 }
 
 
-/* ƒiƒrƒQ[ƒVƒ‡ƒ“ -------------------------------------*/
+/* ãƒŠãƒ“ã‚²ãƒ¼ã‚·ãƒ§ãƒ³ -------------------------------------*/
 nav ul {
   overflow: hidden;
   margin: 0 0 10px 0;
@@ -80,7 +80,7 @@ nav ul {
   border-radius: 7px;
   box-shadow: inset 1px 1px 0 #fff, 1px 1px 3px rgba(0, 0, 0, 0.1);
   line-height: 1.0;
-  background: url(images/li-bg.jpg) repeat-x bottom;
+  background: url(/images/hiroyuki-kanno/li-bg.jpg) repeat-x bottom;
 }
 nav li, nav a {
   display: block;
@@ -96,14 +96,14 @@ nav a {
  text-shadow: 1px 1px 0 #fff;
 }
 nav a:hover {
-  background: url(images/li-bg-hover.jpg) repeat-x bottom;
+  background: url(/images/hiroyuki-kanno/li-bg-hover.jpg) repeat-x bottom;
 }
 nav #current a {
   color: #333;
   background: #fff;
 }
 
-/* ƒTƒCƒhƒo[ -------------------------------------*/
+/* ã‚µã‚¤ãƒ‰ãƒãƒ¼ -------------------------------------*/
 #sub aside {
   margin: 20px 0 20px 20px;
   padding: 15px;
@@ -122,7 +122,7 @@ nav #current a {
   margin: 0.4em 7px 0 0;
 }
 
-/* ƒtƒbƒ^ -------------------------------------*/
+/* ãƒ•ãƒƒã‚¿ -------------------------------------*/
 footer {
   border-top: 1px solid #ccc;
 }
