@@ -132,3 +132,72 @@ nav .menu-list-container ul li {
   font-size: 24px;
   margin-bottom: 20px;
 }
+
+/* 矢印付きシンプルボタン */
+
+.btn {
+  display: inline-block;
+  position: relative;
+  padding: .3em 1em;
+  border-radius: 3px;
+  color: white;
+  background-color: #0c9389;
+  text-decoration: none;
+  -webkit-transition: background-color .3s, box-shadow .3s, -webkit-transform .3s;
+  transition: background-color .3s, box-shadow .3s, transform .3s;
+}
+
+a.btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn.next {
+  padding-right: 2em;
+}
+
+.btn.prev {
+  padding-left: 2em;
+}
+
+.btn.inline {
+  margin: 0 .3em;
+  padding: .3em;
+  line-height: 1;
+}
+
+.btn.bnr {
+  padding: 0;
+}
+
+.btn.bnr img {
+  border-radius: 3px;
+  vertical-align: middle;
+  -webkit-transition: -webkit-filter .3s;
+}
+
+a.btn:hover {
+  background-color: #20a79d;
+  box-shadow: 0 5px 0 #0c9389, 0 10px 3px rgba(0,0,0,.1);
+  -ms-transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.btn.bnr:hover img {
+  -webkit-filter: brightness(1.1);
+}
+
+a.btn:active {
+  background-color: #0c9389;
+  box-shadow: 0 2px 0 #277872, 0 4px 1px rgba(0,0,0,.1);
+  -ms-transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  -webkit-transition-duration: .1s;
+  transition-duration: .1s;
+}
+
