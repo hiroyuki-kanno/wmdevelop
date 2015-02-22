@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>株式会社サンプル・サイト</title>
+    <link rel="stylesheet" href="/css/hiroyuki-kanno/styles.css">
+    <script src="/js/hiroyuki-kanno/searchAddress.js"></script>
+</head>
+<body>
+<div id="page">
+    <header>
+        <img id="logo" src="/images/hiroyuki-kanno/logo.png" alt="株式会社サンプル・サイト" width="220" height="44">
+        <nav>
+            <ul>
+                <li><a href="./test.html">ホーム</a></li>
+                <li><a href="#">お知らせ</a></li>
+                <li><a href="#">製品情報</a></li>
+                <li><a href="#">サービス</a></li>
+                <li><a href="#">会社概要</a></li>
+                <li id="current"><a href="./inquiry.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>お問い合わせ</h1>
+            <p>ご希望の方に当社の資料をお送りします。</p>
+
+            <form name="inquiry" action="">
+            	<p>姓：<input type="text" name="fname" size="10"></p>
+            	<p>名：<input type="text" name="pname" size="10"></p>
+				<p>郵便番号：<input type="text" name="zip1" size="3" maxlength="3"> - <input type="text" name="zip2" size="4" maxlength="4">
+					<input type="button" name="searchAddressBtn" value="検索" onclick="searchAddress()">
+					<img id="loading" style="visibility:hidden;" src="/images/hiroyuki-kanno/loadinfo.net.gif">
+				</p>
+				<div id="result"></div>
+				<p>都道府県：<input type="text" name="addressPref"></p>
+				<p>市区町村：<input type="text" name="addressCity" size="40"></p>
+				<p>町名・番地：<input type="text" name="addressTown" size="40"></p>
+				<p>建物名：<input type="text" name="addressBuilding" size="20"></p>
+				<p><input type="submit" name="submitBtn" value="送信">　<input type="reset" value="クリア"></p>
+            </form>
+        </section>
+    </main>
+
+</div>
+</body>
+</html>
