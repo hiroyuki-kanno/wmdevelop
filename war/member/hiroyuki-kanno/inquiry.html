@@ -24,15 +24,15 @@
 
     <main>
         <section>
-            <h1>お問い合わせ</h1>
+            <h1>資料請求</h1>
             <p>ご希望の方に当社の資料をお送りします。</p>
 
-            <form name="inquiry" action="">
+            <form name="inquiry" action="#">
             	<p>姓：<input type="text" name="fname" size="10"></p>
             	<p>名：<input type="text" name="pname" size="10"></p>
 				<p>郵便番号：<input type="text" name="zip1" size="3" maxlength="3"> - <input type="text" name="zip2" size="4" maxlength="4">
-					<input type="button" name="searchAddressBtn" value="検索" onclick="searchAddress()">
-					<img id="loading" style="visibility:hidden;" src="/images/hiroyuki-kanno/loadinfo.net.gif">
+					<input type="button" name="searchAddressBtn" value="検索">
+					<img id="loading" style="visibility:hidden;" src="/images/hiroyuki-kanno/loadinfo.net.gif" alt="通信中">
 				</p>
 				<div id="result"></div>
 				<p>都道府県：<input type="text" name="addressPref"></p>
@@ -46,4 +46,12 @@
 
 </div>
 </body>
+
+ <!-- イベントリスナー登録 -->
+ <script type="text/javascript">
+ <!--
+ 	var btn = document.forms['inquiry'].elements['searchAddressBtn'];
+ 	btn.addEventListener('click', searchAddress, false);
+ -->
+ </script>
 </html>
