@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+body {
+	font-family: "Times New Roman", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "メイリオ", Meiryo, serif;
+}
+
+.btn {
+	border-radius:5px;
+	background-color: orange;
+}
+
+#dispGraphArea {
+	width:100%;
+}
