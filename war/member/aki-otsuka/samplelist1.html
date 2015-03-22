@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>株式会社サンプル・サイト</title>
+<link rel="stylesheet" href="../../css/aki-otsuka/styles.css">
+<script>
+
+// 画像一覧
+var photo_list = [ '../../images/aki-otsuka/sample1.jpg', '../../images/aki-otsuka/sample2.jpg', '../../images/aki-otsuka/sample3.jpg',
+                   '../../images/aki-otsuka/sample4.jpg', '../../images/aki-otsuka/sample5.jpg', '../../images/aki-otsuka/sample6.jpg',
+                   '../../images/aki-otsuka/sample7.jpg', '../../images/aki-otsuka/sample8.jpg', '../../images/aki-otsuka/sample9.jpg'];
+
+window.addEventListener( 'load', function(event){createThumbs();}, false);
+
+// サムネイル作成
+function createThumbs(event) {
+	var holder = document.getElementById('thumbsholder');
+	for (var i = 0; i<photo_list.length; i++) {
+		var img = document.createElement('img');
+		img.src = photo_list[i];
+		img.width = 100;
+		img.height = 80;
+		img.photid = i;
+		img.addEventListener('click', showPhoto, false);
+		holder.appendChild(img);
+	}
+
+	var large = document.getElementById('img_large');
+	large.src = photo_list[0];
+
+	if ( localStorage['checkImg'] == undefined ) {
+		var checkimg = document.getElementById('checkimg');
+		var p = document.createElement('p');
+		p.innerHTML = 'クリックした画像はありません。'
+		checkimg.appendChild(p);
+	} else {
+		getCheckImg();
+	}
+}
+
+// 表示画像設定
+function showPhoto (event) {
+	var img = event.currentTarget;
+	var large = document.getElementById('img_large');
+	large.src = img.src;
+	addStorage(img.photid);
+	getCheckImg();
+}
+
+// localStorage追加
+function addStorage (photid) {
+	if (localStorage['checkImg'] == undefined) {
+		var arr = [];
+		arr.push(photid);
+		localStorage.setItem('checkImg', JSON.stringify(arr));
+	} else {
+		var arr = JSON.parse(localStorage.getItem('checkImg'));
+		if (arr.indexOf(photid) == -1) {
+			arr.unshift(photid);
+		}
+		if (arr.length > 5) {
+			arr.pop();
+		}
+		localStorage.setItem('checkImg', JSON.stringify(arr));
+	}
+}
+
+// クリックした画像表示
+function getCheckImg () {
+	var checkimg = document.getElementById('checkimg');
+	while (checkimg.childNodes.length > 0) {
+		checkimg.removeChild(checkimg.firstChild);
+	}
+	var arr = JSON.parse(localStorage.getItem('checkImg'));
+	for (var i = 0; i<arr.length; i++) {
+		var img = document.createElement('img');
+		img.src = photo_list[arr[i]];
+		img.width = 100;
+		img.height = 80;
+		checkimg.appendChild(img);
+	}
+}
+</script>
+</head>
+<body>
+
+<div id="page">
+
+<header>
+  <img id="logo" src="../../images/aki-otsuka/logo.png" alt="株式会社サンプル・サイト" width="220" height="44">
+  <nav>
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="#">お知らせ</a></li>
+      <li id="current"><a href="samplelist1.html">サンプル一覧1</a></li>
+      <li><a href="samplelist2.html">サンプル一覧2</a></li>
+      <li><a href="#">サービス</a></li>
+      <li><a href="#">会社概要</a></li>
+      <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="wrapper">
+  <div id="imageholder">
+      <img id="img_large" width="900" height="600">
+   </div>
+   <div id="thumbsholder">
+   </div>
+</div>
+
+<footer>
+  <div id="checkimg">
+    <h1>クリックした画像</h1>
+  </div>
+  <p id="copyright">
+    <small>Copyright &copy; 2014 sample site. ALL rights reserved.</small>
+  </p>
+</footer>
+
+</div>
+
+</body>
+</html>
