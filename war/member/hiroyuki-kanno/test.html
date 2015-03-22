@@ -2,13 +2,36 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>株式会社サンプル・サイト</title>
+    <title>株式会社テスト</title>
     <link rel="stylesheet" href="/css/hiroyuki-kanno/styles.css">
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/js/hiroyuki-kanno/galleria-1.4.2.min.js"></script>
+    <script type="text/javascript">
+		// テーマをロード
+		Galleria.loadTheme('/js/hiroyuki-kanno/themes/classic/galleria.classic.min.js');
+
+		// オプション
+		option = {
+		    width:  900,              // 幅
+		    height: 400,              // 高さ
+		    imageCrop: false,         // 画像のクロップ有無
+		                              // true：width/heightにフィットさせるように画像を切り取って表示
+		                              // false：画像を全体表示させるように縮小
+		    transition: 'fade',       // 画像の遷移イフェクト
+		    _toggleInfo: false,       // imgのalt属性を取得してキャプションとして表示
+		                              // true：キャプションの非表示
+		                              // false：キャプションの表示
+		    autoplay: 3000,
+		}
+
+		// ギャラリー作成
+		Galleria.run( '#gallery', option);
+	</script>
 </head>
 <body>
 <div id="page">
     <header>
-        <img id="logo" src="/images/hiroyuki-kanno/logo.png" alt="株式会社サンプル・サイト" width="220" height="44">
+        <img id="logo" src="/images/hiroyuki-kanno/h_logo.jpg">
         <nav>
             <ul>
                 <li id="current"><a href="./test.html">ホーム</a></li>
@@ -19,26 +42,26 @@
                 <li><a href="./inquiry.html">お問い合わせ</a></li>
             </ul>
         </nav>
-        <img src="/images/hiroyuki-kanno/mainvisual.jpg" alt="日本のサンプルリーディング・カンパニーを目指します。" width="900" height="350">
+        <div id="gallery">
+            <img src="/images/hiroyuki-kanno/slide01.jpg">
+            <img src="/images/hiroyuki-kanno/slide03.jpg">
+            <a href="http://www.youtube.com/watch?v=UUvYrvZhqJA"><img src="/images/hiroyuki-kanno/bnr03.jpg"></a>
+        </div>
     </header>
 
     <main>
         <section>
-            <h1>サンプルだからこその"カタチ"がある</h1>
-            <p>わかりやすいサンプルはどうあるべきなのか？その<a href="#">答えを</a>知っているかどうかで<a href="#">サンプルの出来栄え</a>は決まってきます。これはサンプルのテキストです。…中略…これはサンプルのテキストです。</p>
-            <p>これはサンプルのテキストです。…中略…これはサンプルのテキストです。</p>
+            <h1>高い技術とまごころとは</h1>
+            <p>高い技術”、それは、進歩していく技術、変わりゆく環境に挑戦し続けることを私たちに求めています。そして、”まごころ”。それは普遍であり、不変であり続けたいものです。そのまごころを、お客様に、社員に、そして社員のご家族に届けたい。それがこの創業精神に込められたメッセージであり、これからも変わることなく大切にしていく価値なのです。 </p>
         </section>
     </main>
 
     <div id="sub">
         <aside>
             <section>
-                <h2>最高のサンプルを驚きのプライスで！</h2>
-                <p><img src="/images/hiroyuki-kanno/yen.png" width="45" height="45" alt="">これはサンプルのサイドバーです。これはサンプルのサイドバーです。…中略…テキストです。</p>
-            </section>
-            <section>
-                <h2>CM「サンプルプルルン♪」メイキング公開</h2>
-                <p><img src="/images/hiroyuki-kanno/play.png" width="45" height="45" alt="">これはサンプルのサイドバーのテキストです。これはサンプルのサイドバーです。…中略…テキストです。</p>
+            <h2>ツイッターからも最新情報を配信中！</h2>
+                <a class="twitter-timeline"  href="https://twitter.com/haiteckkanno" data-widget-id="576663930036056064">@haiteckkannoさんのツイート</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </section>
         </aside>
     </div>
@@ -46,16 +69,16 @@
     <footer>
         <aside>
             <section>
-                <h2>一瞬でわかるサンプル</h2>
-                <p>これはサンプルのフッターのテキストです。…中略…テキストです。</p>
+                <h2>企業理念</h2>
+                <p>企業理念はコチラ。</p>
             </section>
             <section>
-                <h2>見えない部分へのこだわり</h2>
-                <p>これはサンプルのフッターのテキストです。…中略…テキストです。</p>
+                <h2>事業内容</h2>
+                <p>事業内容はコチラ</p>
             </section>
             <section>
-                <h2>社会活動・環境活動</h2>
-                <p>これはサンプルのフッターのテキストです。…中略…テキストです。</p>
+                <h2>沿革</h2>
+                <p>沿革はコチラ</p>
             </section>
         </aside>
         <p id="copyright"><small>Copyright &copy; 2014 sample site. All rights reserved.</small></p>
